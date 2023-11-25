@@ -1,0 +1,41 @@
+2023-11-24 14:33:35,426 - root - INFO - Command: python3 main.py -c configs/configs.ini -m inference -uofed
+2023-11-24 14:33:35,426 - initialize - INFO - Initialization has been started.
+2023-11-24 14:33:35,426 - initialize - INFO - Seed has been set into 48763.
+2023-11-24 14:33:35,426 - initialize - INFO - Loading unlabeled data.
+2023-11-24 14:33:39,925 - initialize - INFO - unlabeled data has been loaded.
+2023-11-24 14:33:39,925 - initialize - INFO - Loading FY-4_unlabeled data.
+2023-11-24 14:33:43,578 - utils - INFO - x does not have "txkey" column.
+2023-11-24 14:33:43,578 - initialize - INFO - FY-4_unlabeled data has been loaded.
+2023-11-24 14:33:43,603 - initialize - INFO - Below features are dropped because they contain NaN values.
+2023-11-24 14:33:43,604 - initialize - INFO - autoFE_f_0
+2023-11-24 14:33:43,724 - initialize - INFO - autoFE_f_2
+2023-11-24 14:33:43,884 - initialize - INFO - autoFE_f_18
+2023-11-24 14:33:44,038 - initialize - INFO - autoFE_f_29
+2023-11-24 14:33:44,192 - initialize - INFO - Change the column type to "str" if it is "category".
+2023-11-24 14:33:49,298 - initialize - INFO - Checkpoint has been loaded from outputs/checkpoints/HAHAHAA-9.cbm.
+2023-11-24 14:33:49,299 - initialize - INFO - The details of CatBoostClassifier: 
+{'random_strength': 0.1275436492, 'bootstrap_type': 'Bayesian', 'eval_metric': 'F1', 'boosting_type': 'Ordered', 'iterations': 675, 'nan_mode': 'Forbidden', 'bagging_temperature': 0.65, 'loss_function': 'Logloss', 'devices': '0', 'grow_policy': 'SymmetricTree', 'l2_leaf_reg': 9.788746316, 'task_type': 'GPU', 'depth': 7, 'feature_border_type': 'GreedyLogSum', 'learning_rate': 0.2218586704, 'random_seed': 48763}
+2023-11-24 14:33:49,299 - initialize - INFO - CatBoostClassifier has been initialized.
+2023-11-24 14:33:49,311 - initialize - INFO - The details of parameters: 
+{'seed': '48763', 'version': 'HAHAHAA-10', 'version_info': 'HAHAHAA-9 inference', 'checkpoint_version': 'HAHAHAA-9', 'model_name': 'CatBoostClassifier', 'data_version': 'FY-4', 'origin_unlabeled_df':                                                      txkey  locdt  loctm                                               chid  ...      csmcu  csmam  flg_3dsmk locdt_7_remainder
+0        a2c1209018e4e52e04f6fabb48f05f1b8bc09dc838ff6c...     56  39117  d6d145d0d058e3f63b9ec421cf9e1543b0c3e059d18c2c...  ...         70   1349          0                 0
+1        16c4880500059e01553789be11bbb50753b7acaae7b95b...     56  68120  b599fb83473599fa2df4a04136a668c28df7914293f1da...  ...         70    306          0                 0
+2        623c56be3bee87724e3d119c271d9ed098eeda84233183...     59  37392  8de197129150d454df1639e9743c1aa11b1c1122a2010c...  ...  100000000      0          0                 3
+3        250da12187059cf6e3a3066656a2919d08ceb8207efd55...     58  82898  f9cbad08a76f1dd9736a4fc51255eb55637ec0a417a406...  ...         70   8339          0                 2
+4        4b268e0da036f44cbbb056ddfac6a28ea336d9cf299843...     59  37177  27d235e691a425098f291105f78f9877e05bb75e1f132b...  ...         68      5          0                 3
+...                                                    ...    ...    ...                                                ...  ...        ...    ...        ...               ...
+1354316  47cd55bd7492e01e197b61799d072e6ca9e1c118bc76e9...     62  76826  35a642ce73e12a772338aa1eee4e34a00cbef7a2e02cff...  ...         70    209          0                 6
+1354317  26cef9cc35fb73bedd08a711ebb6d612e4af7dd7b62e7c...     64  61258  78ccc573e4b7a633de186de5ca090c0f218f59d0ab0d9c...  ...         70    188          0                 1
+1354318  f12f861ef6a8517ecddae262c1cc895f618e7e8c19eb9a...     62  66172  2acc0a2dce521a9895ce727b3ad4137eb305c1c31f5a9c...  ...         70   9091          0                 6
+1354319  638b1a6a6f4389b7af60a6cb0ca908c82d0bdffc6924b0...     61  44444  d2f8b22d248900336cb4312fef14cbf86ff1dbb2e090f3...  ...         70     86          1                 5
+1354320  9b9a8957b74f24aedbb085924fb3cc7653c980607ff818...     60  48933  91108b043a110ce82336c6afdac81a1c12988bc71080e3...  ...         70   1161          0                 4
+
+[1354321 rows x 26 columns], 'unlabeled_data': <catboost.core.Pool object at 0x7f7bf9497d60>, 'model': <catboost.core.CatBoostClassifier object at 0x7f7c71f73160>}
+2023-11-24 14:33:49,312 - initialize - INFO - Initialization has been finished.
+2023-11-24 14:33:49,449 - inference - INFO - Inferencing has been started.
+2023-11-24 14:33:51,178 - inference - INFO - Inferencing has been finished.
+2023-11-24 14:33:51,178 - save - INFO - Saving results has been started.
+2023-11-24 14:33:52,613 - save - INFO - Number of data's prediction is 1: 4843
+2023-11-24 14:33:52,613 - save - INFO - Number of data: 1354321
+2023-11-24 14:33:52,613 - save - INFO - Writing predictions has been finished.
+2023-11-24 14:33:52,622 - save - INFO - Saving results has been finished.

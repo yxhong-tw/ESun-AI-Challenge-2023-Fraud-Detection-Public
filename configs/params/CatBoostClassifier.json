@@ -1,0 +1,18 @@
+{
+    "bagging_temperature": 0.65,
+    "boosting_type": "Ordered",
+    "bootstrap_type": "Bayesian",
+    "depth": 6,
+    "devices": "0",
+    "eval_metric": "F1",
+    "feature_border_type": "GreedyLogSum",
+    "grow_policy": "SymmetricTree",
+    "iterations": 450,
+    "l2_leaf_reg": 9.78874631581315,
+    "learning_rate": 0.2218586703700778,
+    "loss_function": "Logloss",
+    "nan_mode": "Forbidden",
+    "random_seed": 48763,
+    "random_strength": 0.1275436492418589,
+    "task_type": "GPU"
+}

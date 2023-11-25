@@ -1,0 +1,793 @@
+2023-11-24 13:36:05,722 - root - INFO - Command: python3 main.py -c configs/configs.ini -m train_with_optuna -uofed
+2023-11-24 13:36:05,722 - initialize - INFO - Initialization has been started.
+2023-11-24 13:36:05,722 - initialize - INFO - Seed has been set into 48763.
+2023-11-24 13:36:05,722 - initialize - INFO - Loading train data.
+2023-11-24 13:36:37,826 - initialize - INFO - train data has been loaded.
+2023-11-24 13:36:37,826 - initialize - INFO - Loading FY-4_train_x data.
+2023-11-24 13:36:56,677 - utils - INFO - x does not have "txkey" column.
+2023-11-24 13:36:56,677 - initialize - INFO - FY-4_train_x data has been loaded.
+2023-11-24 13:36:57,402 - initialize - INFO - (Train) Checking need to drop columns.
+2023-11-24 13:36:58,413 - initialize - INFO - autoFE_f_0: 1430, float64
+2023-11-24 13:36:58,429 - initialize - INFO - autoFE_f_2: 44785, float64
+2023-11-24 13:36:58,511 - initialize - INFO - autoFE_f_18: 4, float64
+2023-11-24 13:37:01,217 - initialize - INFO - autoFE_f_29: 4868, float64
+2023-11-24 13:37:01,218 - initialize - INFO - 0          46
+1          17
+2          44
+3          42
+4          31
+           ..
+9297561    59
+9297562    57
+9297563    58
+9297564    56
+9297565    57
+Name: locdt, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,218 - initialize - INFO - ----------
+2023-11-24 13:37:01,218 - initialize - INFO - 0          37092
+1          32109
+2          77201
+3          37622
+4          68257
+           ...  
+9297561    72288
+9297562    22867
+9297563    68799
+9297564    65785
+9297565    81816
+Name: loctm, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,219 - initialize - INFO - ----------
+2023-11-24 13:37:01,219 - initialize - INFO - 0          84d2dc85d4da6a7fa284a11a4290d7e9a969163dcb4d82...
+1          9a8cf5d0afd729cb7876f6b3172152c7c9c6fabd40515c...
+2          dcc1389a5765d6f53152cf85970fbe78a83fd3d1c299b0...
+3          577f2329d1eccd59ba0abaf6113bb78dcd575badcbc57f...
+4          fff6b4126c40620b1fbb11d4de02cd67b9e95071caa40b...
+                                 ...                        
+9297561    f5dcc020cae2c9622dff98ddda77dd5922a1e2710f4cf7...
+9297562    a85e67a05affcae76a78089adfcec80d4b56f0322946d5...
+9297563    70373f9368db3c031ddcf7f2ebc211ae958eb90cc1bbc9...
+9297564    2610be789aecfd045f099c96226a6815892e716f03c593...
+9297565    eb6002f9e482cb26633625ad5b0e411cae3a591317a08e...
+Name: chid, Length: 9297566, dtype: object
+2023-11-24 13:37:01,219 - initialize - INFO - ----------
+2023-11-24 13:37:01,219 - initialize - INFO - 0          3dd5bf1e29e5e0baa789ce692fe5dbd34ff05173acf351...
+1          8cb13f9b38c7bbc02d210e580dcbbcbb6c95bf18bc3320...
+2          1ec32868e5e1d5ff8df56737c2a91326cbfe3364382de6...
+3          4359dca1ac6a835eceb2bc0dd6b0b710f030c3499126e9...
+4          a3837f2905383f235a72679482c5f02e40f2a8ca29750d...
+                                 ...                        
+9297561    a56ee1cce7cb8dca27e731731765666b10fdd570e8ba7e...
+9297562    271d88b224515825d0395e5435eaa77da852819eac67b9...
+9297563    79dbd844b4b86f2d589c7215c6c9e89172a7ac24bb19fe...
+9297564    96303e61c24dbb3e1c9df6764b868fbfccb498661b7bdd...
+9297565    22a78656b5e4cb1d0e3736cf3f77c90d6554de6f0c3902...
+Name: cano, Length: 9297566, dtype: object
+2023-11-24 13:37:01,219 - initialize - INFO - ----------
+2023-11-24 13:37:01,220 - initialize - INFO - 0          5
+1          5
+2          5
+3          5
+4          5
+          ..
+9297561    5
+9297562    2
+9297563    5
+9297564    2
+9297565    4
+Name: contp, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,220 - initialize - INFO - ----------
+2023-11-24 13:37:01,220 - initialize - INFO - 0          1
+1          8
+2          4
+3          1
+4          5
+          ..
+9297561    8
+9297562    4
+9297563    5
+9297564    1
+9297565    1
+Name: etymd, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,220 - initialize - INFO - ----------
+2023-11-24 13:37:01,221 - initialize - INFO - 0          cad752c5d05d2bdcc30d64fa4e68404c2d1f7be5d14d52...
+1          4356c6642ef6e837543b577c7ee3ffa92b4b8fcfb57254...
+2          5b7eff061f8896aac4339ea35c25f8bb956a43bc486460...
+3          cad752c5d05d2bdcc30d64fa4e68404c2d1f7be5d14d52...
+4          50d5b02ce3fc88723438c2a29cfdb04be4a1a11280ddb6...
+                                 ...                        
+9297561    c41016dfbe250076e6e98a58d0fbd2ab54a206dcd43f73...
+9297562    12e61ef3849041058d7d75845c6e73eac3b257b2195862...
+9297563    24276d55fe755c060b438ed2c3765d30b249085f07095d...
+9297564    2e5926142c62b9f847c193a910b615e1a28997b1bd32ab...
+9297565    13413d0576372c51a60afc55bdf3abf2a68d6ea2cca935...
+Name: mchno, Length: 9297566, dtype: object
+2023-11-24 13:37:01,221 - initialize - INFO - ----------
+2023-11-24 13:37:01,221 - initialize - INFO - 0          8f6b3ff512a001e0d1988c6cd888ef8c74112fb71117e5...
+1          379166ff4a62dac343b4b734188aa618716cc496e48b65...
+2          8f6b3ff512a001e0d1988c6cd888ef8c74112fb71117e5...
+3          36684976be1f529e6e2a32c9edab4cf8e364b2b916ae2c...
+4          379166ff4a62dac343b4b734188aa618716cc496e48b65...
+                                 ...                        
+9297561    379166ff4a62dac343b4b734188aa618716cc496e48b65...
+9297562    5d2fbec5d1f0d08c596cbfb0a295c4832a7eb859f295b8...
+9297563    5c3b8aec58d5c0780ef9c4cdecc24282178edb2faa8e29...
+9297564    8f6b3ff512a001e0d1988c6cd888ef8c74112fb71117e5...
+9297565    2baa7172be1d8004e1211c8fe18e37939d48b2bd2c9ded...
+Name: acqic, Length: 9297566, dtype: object
+2023-11-24 13:37:01,221 - initialize - INFO - ----------
+2023-11-24 13:37:01,221 - initialize - INFO - 0          375
+1          282
+2          288
+3          375
+4          406
+          ... 
+9297561    276
+9297562    289
+9297563    275
+9297564    289
+9297565    348
+Name: mcc, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,221 - initialize - INFO - ----------
+2023-11-24 13:37:01,222 - initialize - INFO - 0          1524.0
+1           101.0
+2           117.0
+3          1676.0
+4            14.0
+            ...  
+9297561     350.0
+9297562     798.0
+9297563     179.0
+9297564    1272.0
+9297565    2749.0
+Name: conam, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,222 - initialize - INFO - ----------
+2023-11-24 13:37:01,222 - initialize - INFO - 0          0
+1          1
+2          0
+3          0
+4          1
+          ..
+9297561    1
+9297562    0
+9297563    1
+9297564    0
+9297565    1
+Name: ecfg, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,222 - initialize - INFO - ----------
+2023-11-24 13:37:01,223 - initialize - INFO - 0          0
+1          0
+2          0
+3          0
+4          0
+          ..
+9297561    0
+9297562    0
+9297563    0
+9297564    0
+9297565    0
+Name: insfg, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,223 - initialize - INFO - ----------
+2023-11-24 13:37:01,223 - initialize - INFO - 0          0.0
+1          0.0
+2          0.0
+3          0.0
+4          0.0
+          ... 
+9297561    0.0
+9297562    0.0
+9297563    0.0
+9297564    0.0
+9297565    0.0
+Name: iterm, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,223 - initialize - INFO - ----------
+2023-11-24 13:37:01,224 - initialize - INFO - 0          0
+1          0
+2          0
+3          0
+4          0
+          ..
+9297561    0
+9297562    0
+9297563    0
+9297564    0
+9297565    0
+Name: bnsfg, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,224 - initialize - INFO - ----------
+2023-11-24 13:37:01,224 - initialize - INFO - 0          1529
+1           101
+2           116
+3          1683
+4            14
+           ... 
+9297561     349
+9297562     798
+9297563     179
+9297564    1271
+9297565    2745
+Name: flam1, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,224 - initialize - INFO - ----------
+2023-11-24 13:37:01,224 - initialize - INFO - 0          0
+1          0
+2          0
+3          0
+4          0
+          ..
+9297561    0
+9297562    0
+9297563    0
+9297564    0
+9297565    0
+Name: stocn, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,224 - initialize - INFO - ----------
+2023-11-24 13:37:01,225 - initialize - INFO - 0          15759
+1          15759
+2          15759
+3          15759
+4          15759
+           ...  
+9297561    15759
+9297562     8923
+9297563    16115
+9297564    15759
+9297565    15759
+Name: scity, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,225 - initialize - INFO - ----------
+2023-11-24 13:37:01,225 - initialize - INFO - 0          100000000
+1          100000000
+2          100000000
+3          100000000
+4          100000000
+             ...    
+9297561    100000000
+9297562    100000000
+9297563    100000000
+9297564    100000000
+9297565    100000000
+Name: stscd, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,225 - initialize - INFO - ----------
+2023-11-24 13:37:01,225 - initialize - INFO - 0          0
+1          0
+2          0
+3          0
+4          0
+          ..
+9297561    0
+9297562    0
+9297563    0
+9297564    0
+9297565    0
+Name: ovrlt, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,225 - initialize - INFO - ----------
+2023-11-24 13:37:01,226 - initialize - INFO - 0          0
+1          0
+2          0
+3          0
+4          0
+          ..
+9297561    0
+9297562    0
+9297563    0
+9297564    0
+9297565    0
+Name: flbmk, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,226 - initialize - INFO - ----------
+2023-11-24 13:37:01,226 - initialize - INFO - 0          6
+1          8
+2          6
+3          6
+4          6
+          ..
+9297561    6
+9297562    6
+9297563    6
+9297564    6
+9297565    6
+Name: hcefg, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,226 - initialize - INFO - ----------
+2023-11-24 13:37:01,227 - initialize - INFO - 0          70
+1          70
+2          70
+3          70
+4          70
+           ..
+9297561    70
+9297562    70
+9297563    70
+9297564    70
+9297565    70
+Name: csmcu, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,227 - initialize - INFO - ----------
+2023-11-24 13:37:01,227 - initialize - INFO - 0          1529
+1           101
+2           116
+3          1683
+4            14
+           ... 
+9297561     349
+9297562     798
+9297563     179
+9297564    1271
+9297565    2745
+Name: csmam, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,227 - initialize - INFO - ----------
+2023-11-24 13:37:01,227 - initialize - INFO - 0          0
+1          0
+2          0
+3          0
+4          0
+          ..
+9297561    0
+9297562    0
+9297563    0
+9297564    0
+9297565    0
+Name: flg_3dsmk, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,227 - initialize - INFO - ----------
+2023-11-24 13:37:01,228 - initialize - INFO - 0          4
+1          3
+2          2
+3          0
+4          3
+          ..
+9297561    3
+9297562    1
+9297563    2
+9297564    0
+9297565    1
+Name: locdt_7_remainder, Length: 9297566, dtype: int64
+2023-11-24 13:37:01,228 - initialize - INFO - ----------
+2023-11-24 13:37:01,228 - initialize - INFO - 0          17508.987671
+1          18300.017955
+2          17508.987671
+3          17669.061481
+4          18300.017955
+               ...     
+9297561    18300.017955
+9297562    20385.325258
+9297563    18991.453855
+9297564    17508.987671
+9297565    18711.054078
+Name: autoFE_f_0, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,228 - initialize - INFO - ----------
+2023-11-24 13:37:01,229 - initialize - INFO - 0          42.0
+1          35.0
+2          14.0
+3           6.0
+4          41.0
+           ... 
+9297561    25.0
+9297562    41.0
+9297563    31.0
+9297564    58.0
+9297565    45.0
+Name: autoFE_f_1, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,229 - initialize - INFO - ----------
+2023-11-24 13:37:01,229 - initialize - INFO - 0          19.033539
+1          18.528946
+2          17.983662
+3          23.735346
+4          19.283948
+             ...    
+9297561    20.555674
+9297562    19.219968
+9297563    18.054666
+9297564    20.267301
+9297565    20.785099
+Name: autoFE_f_2, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,229 - initialize - INFO - ----------
+2023-11-24 13:37:01,230 - initialize - INFO - 0          1.0
+1          1.0
+2          1.0
+3          1.0
+4          1.0
+          ... 
+9297561    1.0
+9297562    2.0
+9297563    1.0
+9297564    1.0
+9297565    1.0
+Name: autoFE_f_3, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,230 - initialize - INFO - ----------
+2023-11-24 13:37:01,230 - initialize - INFO - 0          64.0
+1          62.0
+2          63.0
+3          63.0
+4          64.0
+           ... 
+9297561    64.0
+9297562    64.0
+9297563    59.0
+9297564    64.0
+9297565    64.0
+Name: autoFE_f_4, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,230 - initialize - INFO - ----------
+2023-11-24 13:37:01,231 - initialize - INFO - 0           225.0
+1            60.0
+2           636.0
+3          1739.5
+4           233.0
+            ...  
+9297561     598.0
+9297562     269.0
+9297563     414.0
+9297564    1000.0
+9297565     910.5
+Name: autoFE_f_5, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,231 - initialize - INFO - ----------
+2023-11-24 13:37:01,231 - initialize - INFO - 0          7.0
+1          9.0
+2          9.0
+3          7.0
+4          6.0
+          ... 
+9297561    9.0
+9297562    9.0
+9297563    9.0
+9297564    9.0
+9297565    5.0
+Name: autoFE_f_6, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,231 - initialize - INFO - ----------
+2023-11-24 13:37:01,232 - initialize - INFO - 0          42.0
+1          26.0
+2          14.0
+3           6.0
+4          41.0
+           ... 
+9297561    25.0
+9297562    30.0
+9297563    31.0
+9297564    27.0
+9297565    45.0
+Name: autoFE_f_7, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,232 - initialize - INFO - ----------
+2023-11-24 13:37:01,232 - initialize - INFO - 0          0.0
+1          1.0
+2          7.0
+3          1.0
+4          0.0
+          ... 
+9297561    1.0
+9297562    1.0
+9297563    0.0
+9297564    0.0
+9297565    0.0
+Name: autoFE_f_8, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,232 - initialize - INFO - ----------
+2023-11-24 13:37:01,233 - initialize - INFO - 0            0.0
+1            0.0
+2          103.0
+3          842.0
+4            0.0
+           ...  
+9297561      0.0
+9297562      0.0
+9297563     15.0
+9297564      0.0
+9297565      0.0
+Name: autoFE_f_9, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,233 - initialize - INFO - ----------
+2023-11-24 13:37:01,233 - initialize - INFO - 0           2.0
+1          15.0
+2           5.0
+3           5.0
+4           9.0
+           ... 
+9297561     2.0
+9297562     4.0
+9297563    19.0
+9297564     2.0
+9297565     4.0
+Name: autoFE_f_10, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,233 - initialize - INFO - ----------
+2023-11-24 13:37:01,234 - initialize - INFO - 0          40764.0
+1          49733.0
+2          63339.5
+3          40764.0
+4          49748.0
+            ...   
+9297561    62392.0
+9297562    55716.0
+9297563    58395.0
+9297564    53927.0
+9297565    54324.5
+Name: autoFE_f_11, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,234 - initialize - INFO - ----------
+2023-11-24 13:37:01,234 - initialize - INFO - 0          0.0
+1          0.0
+2          0.0
+3          0.0
+4          0.0
+          ... 
+9297561    0.0
+9297562    0.0
+9297563    0.0
+9297564    0.0
+9297565    0.0
+Name: autoFE_f_12, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,234 - initialize - INFO - ----------
+2023-11-24 13:37:01,235 - initialize - INFO - 0          0.469438
+1          0.730144
+2          0.227273
+3          0.544258
+4          0.159182
+             ...   
+9297561    0.564945
+9297562    0.631034
+9297563    0.332144
+9297564    0.887205
+9297565    0.849396
+Name: autoFE_f_13, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,235 - initialize - INFO - ----------
+2023-11-24 13:37:01,235 - initialize - INFO - 0           2.0
+1          15.0
+2           5.0
+3           5.0
+4          12.0
+           ... 
+9297561     3.0
+9297562    11.0
+9297563    21.0
+9297564     4.0
+9297565     4.0
+Name: autoFE_f_14, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,235 - initialize - INFO - ----------
+2023-11-24 13:37:01,236 - initialize - INFO - 0          7.0
+1          7.0
+2          7.0
+3          5.0
+4          7.0
+          ... 
+9297561    7.0
+9297562    7.0
+9297563    6.0
+9297564    7.0
+9297565    7.0
+Name: autoFE_f_15, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,236 - initialize - INFO - ----------
+2023-11-24 13:37:01,236 - initialize - INFO - 0           9.0
+1          14.0
+2           6.0
+3           2.0
+4          14.0
+           ... 
+9297561    18.0
+9297562    26.0
+9297563     9.0
+9297564    33.0
+9297565    13.0
+Name: autoFE_f_16, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,236 - initialize - INFO - ----------
+2023-11-24 13:37:01,237 - initialize - INFO - 0          67.0
+1          30.0
+2          14.0
+3           6.0
+4          62.0
+           ... 
+9297561    44.0
+9297562    87.0
+9297563    51.0
+9297564    42.0
+9297565    76.0
+Name: autoFE_f_17, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,237 - initialize - INFO - ----------
+2023-11-24 13:37:01,237 - initialize - INFO - 0          19150.828138
+1          19150.828138
+2          19150.828138
+3          19150.828138
+4          19150.828138
+               ...     
+9297561    19150.828138
+9297562    19150.828138
+9297563    19150.828138
+9297564    19150.828138
+9297565    19150.828138
+Name: autoFE_f_18, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,237 - initialize - INFO - ----------
+2023-11-24 13:37:01,237 - initialize - INFO - 0           0.0
+1           1.0
+2           2.0
+3           0.0
+4           3.0
+           ... 
+9297561    16.0
+9297562    71.0
+9297563    19.0
+9297564    71.0
+9297565    37.0
+Name: autoFE_f_19, Length: 9297566, dtype: object
+2023-11-24 13:37:01,237 - initialize - INFO - ----------
+2023-11-24 13:37:01,238 - initialize - INFO - 0          52283.0
+1          52283.0
+2          52283.0
+3          52283.0
+4          52283.0
+            ...   
+9297561    52283.0
+9297562     1858.0
+9297563     1428.0
+9297564    52283.0
+9297565    52283.0
+Name: autoFE_f_20, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,238 - initialize - INFO - ----------
+2023-11-24 13:37:01,238 - initialize - INFO - 0           4.0
+1          49.0
+2          14.0
+3           5.0
+4          26.0
+           ... 
+9297561    26.0
+9297562    11.0
+9297563    24.0
+9297564    71.0
+9297565    55.0
+Name: autoFE_f_21, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,238 - initialize - INFO - ----------
+2023-11-24 13:37:01,239 - initialize - INFO - 0          1850.915664
+1            90.096737
+2           778.495868
+3          1850.915664
+4            46.777395
+              ...     
+9297561     424.622080
+9297562     560.917241
+9297563    1029.655819
+9297564     619.070707
+9297565    1828.074981
+Name: autoFE_f_22, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,239 - initialize - INFO - ----------
+2023-11-24 13:37:01,239 - initialize - INFO - 0          1.0
+1          0.0
+2          0.0
+3          1.0
+4          0.0
+          ... 
+9297561    0.0
+9297562    0.0
+9297563    0.0
+9297564    0.0
+9297565    0.0
+Name: autoFE_f_23, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,240 - initialize - INFO - ----------
+2023-11-24 13:37:01,240 - initialize - INFO - 0          78593.0
+1          86174.0
+2          77944.0
+3          57518.0
+4          74645.0
+            ...   
+9297561    82879.0
+9297562    82566.0
+9297563    86379.0
+9297564    76184.0
+9297565    81816.0
+Name: autoFE_f_24, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,240 - initialize - INFO - ----------
+2023-11-24 13:37:01,240 - initialize - INFO - 0          5.0
+1          3.0
+2          3.0
+3          2.0
+4          3.0
+          ... 
+9297561    5.0
+9297562    5.0
+9297563    5.0
+9297564    6.0
+9297565    4.0
+Name: autoFE_f_25, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,241 - initialize - INFO - ----------
+2023-11-24 13:37:01,241 - initialize - INFO - 0           68.0
+1           61.0
+2           13.0
+3            6.0
+4           67.0
+           ...  
+9297561     44.0
+9297562    112.0
+9297563     51.0
+9297564    145.0
+9297565     76.0
+Name: autoFE_f_26, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,241 - initialize - INFO - ----------
+2023-11-24 13:37:01,241 - initialize - INFO - 0          1.0
+1          3.0
+2          1.0
+3          1.0
+4          3.0
+          ... 
+9297561    2.0
+9297562    8.0
+9297563    2.0
+9297564    2.0
+9297565    6.0
+Name: autoFE_f_27, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,241 - initialize - INFO - ----------
+2023-11-24 13:37:01,242 - initialize - INFO - 0          0.750000
+1          0.257143
+2          0.714286
+3          0.666667
+4          0.402985
+             ...   
+9297561    0.902174
+9297562    0.844828
+9297563    0.950980
+9297564    0.726190
+9297565    0.822368
+Name: autoFE_f_28, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,242 - initialize - INFO - ----------
+2023-11-24 13:37:01,242 - initialize - INFO - 0          19109.711594
+1          19109.711594
+2          19109.711594
+3          19109.711594
+4          19109.711594
+               ...     
+9297561    19109.711594
+9297562    15634.096689
+9297563    17778.287195
+9297564    19109.711594
+9297565    19109.711594
+Name: autoFE_f_29, Length: 9297566, dtype: float64
+2023-11-24 13:37:01,242 - initialize - INFO - ----------
+2023-11-24 13:37:01,242 - initialize - INFO - Loading new_public data.
+2023-11-24 13:37:03,298 - initialize - INFO - new_public data has been loaded.
+2023-11-24 13:37:03,299 - initialize - INFO - Loading FY-4_new_public_x data.
+2023-11-24 13:37:04,492 - utils - INFO - x does not have "txkey" column.
+2023-11-24 13:37:04,492 - initialize - INFO - FY-4_new_public_x data has been loaded.
+2023-11-24 13:37:04,540 - initialize - INFO - Checking need to drop columns.
+2023-11-24 13:37:04,612 - initialize - INFO - autoFE_f_0: 1386, float64
+2023-11-24 13:37:04,614 - initialize - INFO - autoFE_f_2: 94750, float64
+2023-11-24 13:37:04,620 - initialize - INFO - autoFE_f_18: 3, float64
+2023-11-24 13:37:04,698 - initialize - INFO - autoFE_f_29: 1404, float64
+2023-11-24 13:37:04,698 - initialize - INFO - Drop columns.
+2023-11-24 13:37:04,698 - initialize - INFO - autoFE_f_18
+2023-11-24 13:37:05,624 - initialize - INFO - autoFE_f_29
+2023-11-24 13:37:06,936 - initialize - INFO - autoFE_f_2
+2023-11-24 13:37:08,287 - initialize - INFO - autoFE_f_0
+2023-11-24 13:37:24,787 - initialize - INFO - The details of parameters: 
+{'seed': '48763', 'version': 'HAHAHAA-9', 'version_info': 'HAHAHAA-7 inference', 'checkpoint_version': 'None', 'model_name': 'CatBoostClassifier', 'data_version': 'FY-4', 'train_data': <catboost.core.Pool object at 0x7fa8628306a0>, 'validate_data': <catboost.core.Pool object at 0x7fadeb421ba0>}
+2023-11-24 13:37:24,787 - initialize - INFO - Initialization has been finished.
+2023-11-24 13:37:25,852 - train - INFO - Training with Optuna has been started.
+2023-11-24 13:37:25,853 - initialize - INFO - Raise an exception when loading checkpoint. 
+It may be caused by no configs is given.
+2023-11-24 13:37:25,853 - initialize - INFO - The details of CatBoostClassifier: 
+{'iterations': 699, 'learning_rate': 0.2218586703700778, 'depth': 8, 'l2_leaf_reg': 9.78874631581315, 'loss_function': 'Logloss', 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Forbidden', 'random_seed': 48763, 'random_strength': 0.1275436492418589, 'eval_metric': 'F1', 'bagging_temperature': 0.65, 'boosting_type': 'Ordered', 'task_type': 'GPU', 'devices': '0', 'bootstrap_type': 'Bayesian', 'grow_policy': 'SymmetricTree'}
+2023-11-24 13:37:25,853 - initialize - INFO - CatBoostClassifier has been initialized.
+2023-11-24 13:48:09,247 - train - INFO - Training loss: 0.001110932449787127
+2023-11-24 13:48:09,247 - train - INFO - Training with Optuna has been finished.
+2023-11-24 13:48:09,247 - train - INFO - Training with Optuna has been started.
+2023-11-24 13:48:09,248 - initialize - INFO - Raise an exception when loading checkpoint. 
+It may be caused by no configs is given.
+2023-11-24 13:48:09,248 - initialize - INFO - The details of CatBoostClassifier: 
+{'iterations': 461, 'learning_rate': 0.2218586703700778, 'depth': 8, 'l2_leaf_reg': 9.78874631581315, 'loss_function': 'Logloss', 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Forbidden', 'random_seed': 48763, 'random_strength': 0.1275436492418589, 'eval_metric': 'F1', 'bagging_temperature': 0.65, 'boosting_type': 'Ordered', 'task_type': 'GPU', 'devices': '0', 'bootstrap_type': 'Bayesian', 'grow_policy': 'SymmetricTree'}
+2023-11-24 13:48:09,248 - initialize - INFO - CatBoostClassifier has been initialized.
+2023-11-24 13:55:36,227 - train - INFO - Training loss: 0.0011583887964938889
+2023-11-24 13:55:36,227 - train - INFO - Training with Optuna has been finished.
+2023-11-24 13:55:36,228 - train - INFO - Training with Optuna has been started.
+2023-11-24 13:55:36,228 - initialize - INFO - Raise an exception when loading checkpoint. 
+It may be caused by no configs is given.
+2023-11-24 13:55:36,228 - initialize - INFO - The details of CatBoostClassifier: 
+{'iterations': 544, 'learning_rate': 0.2218586703700778, 'depth': 6, 'l2_leaf_reg': 9.78874631581315, 'loss_function': 'Logloss', 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Forbidden', 'random_seed': 48763, 'random_strength': 0.1275436492418589, 'eval_metric': 'F1', 'bagging_temperature': 0.65, 'boosting_type': 'Ordered', 'task_type': 'GPU', 'devices': '0', 'bootstrap_type': 'Bayesian', 'grow_policy': 'SymmetricTree'}
+2023-11-24 13:55:36,228 - initialize - INFO - CatBoostClassifier has been initialized.
+2023-11-24 14:01:57,001 - train - INFO - Training loss: 0.0012629830182168107
+2023-11-24 14:01:57,001 - train - INFO - Training with Optuna has been finished.
+2023-11-24 14:01:57,001 - train - INFO - Training with Optuna has been started.
+2023-11-24 14:01:57,001 - initialize - INFO - Raise an exception when loading checkpoint. 
+It may be caused by no configs is given.
+2023-11-24 14:01:57,002 - initialize - INFO - The details of CatBoostClassifier: 
+{'iterations': 480, 'learning_rate': 0.2218586703700778, 'depth': 9, 'l2_leaf_reg': 9.78874631581315, 'loss_function': 'Logloss', 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Forbidden', 'random_seed': 48763, 'random_strength': 0.1275436492418589, 'eval_metric': 'F1', 'bagging_temperature': 0.65, 'boosting_type': 'Ordered', 'task_type': 'GPU', 'devices': '0', 'bootstrap_type': 'Bayesian', 'grow_policy': 'SymmetricTree'}
+2023-11-24 14:01:57,002 - initialize - INFO - CatBoostClassifier has been initialized.
+2023-11-24 14:11:20,568 - train - INFO - Training loss: 0.001085156109338186
+2023-11-24 14:11:20,568 - train - INFO - Training with Optuna has been finished.
+2023-11-24 14:11:20,569 - train - INFO - Training with Optuna has been started.
+2023-11-24 14:11:20,569 - initialize - INFO - Raise an exception when loading checkpoint. 
+It may be caused by no configs is given.
+2023-11-24 14:11:20,569 - initialize - INFO - The details of CatBoostClassifier: 
+{'iterations': 675, 'learning_rate': 0.2218586703700778, 'depth': 7, 'l2_leaf_reg': 9.78874631581315, 'loss_function': 'Logloss', 'feature_border_type': 'GreedyLogSum', 'nan_mode': 'Forbidden', 'random_seed': 48763, 'random_strength': 0.1275436492418589, 'eval_metric': 'F1', 'bagging_temperature': 0.65, 'boosting_type': 'Ordered', 'task_type': 'GPU', 'devices': '0', 'bootstrap_type': 'Bayesian', 'grow_policy': 'SymmetricTree'}
+2023-11-24 14:11:20,569 - initialize - INFO - CatBoostClassifier has been initialized.
+2023-11-24 14:20:13,979 - train - INFO - Training loss: 0.0011515630433209616
+2023-11-24 14:20:13,979 - train - INFO - Training with Optuna has been finished.
+2023-11-24 14:20:13,980 - train - INFO - Best trial: 0.0012629830182168107
+2023-11-24 14:20:13,980 - train - INFO - Params: 
+2023-11-24 14:20:13,980 - train - INFO - depth: 6
+2023-11-24 14:20:13,980 - train - INFO - iterations: 544
+2023-11-24 14:20:13,980 - save - INFO - Saving results has been started.
+2023-11-24 14:20:33,221 - save - INFO - Saving model has been finished.
+2023-11-24 14:20:33,221 - save - INFO - Saving results has been finished.

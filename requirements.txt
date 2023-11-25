@@ -1,0 +1,7 @@
+catboost==1.2.2
+numpy==1.24.4
+openfe==0.0.12
+optuna==3.4.0
+pandas==2.0.3
+tables==3.9.1
+ydata-profiling==4.6.1
