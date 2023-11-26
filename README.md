@@ -97,19 +97,22 @@ ydata-profiling==4.6.1
 ### 超參數設定
 ```
 - CatBoostClassifier
-  - 'random_strength': 0.1275436492
+  - 'random_strength': 0.1275436492418589
   - 'bootstrap_type': 'Bayesian'
   - 'boosting_type': 'Ordered'
-  - 'iterations': 675
+  - 'iterations': 544
+  - 'task_type': 'GPU'
+  - 'devices': '0'
   - 'nan_mode': 'Forbidden'
   - 'bagging_temperature': 0.65
   - 'loss_function': 'Logloss'
   - 'grow_policy': 'SymmetricTree'
-  - 'l2_leaf_reg': 9.788746316
-  - 'depth': 7
+  - 'l2_leaf_reg': 9.78874631581315
+  - 'depth': 6
   - 'feature_border_type': 'GreedyLogSum'
-  - 'learning_rate': 0.2218586704
+  - 'learning_rate': 0.2218586703700778
   - 'random_seed': 48763
+  - 'eval_metric': 'F1'
 ```
 > 注意：以上參數設定僅適用由 OpenFE 經特徵工程所產生之訓練資料集，並非主辦單位提供之原始訓練資料集。
 
