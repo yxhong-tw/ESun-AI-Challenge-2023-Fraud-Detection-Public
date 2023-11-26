@@ -128,7 +128,7 @@ ydata-profiling==4.6.1
 ```
 > 注意：
 >   - 若以我們的參數設置，使用 `openfe-train` 模式執行程式，主記憶體與交換記憶體總和需大於 500 GB。
->   - 若以 `openfe-inference` 模式執行程式，則需大於 250 GB。
+>   - 若以 `openfe-inference` 模式執行程式，則主記憶體與交換記憶體總和至少需大於等於 128 GB。
 
 ## 使用方法
 本專案的 `main.py` 整合了七種模式（cv_train_with_optuna, evalute, inference, train, train_with_optuna, openfe-inference, openfe-train），可透過 `--mode` 參數指定要執行的模式，詳細用法可以通過 `python3 main.py -h` 查看，如下所示：
