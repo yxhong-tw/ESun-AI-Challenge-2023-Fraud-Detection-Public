@@ -68,6 +68,7 @@
 - `outputs/studies/`: 存放 Optuna 運算中間產物的資料夾。
 - `Preprocess/`: 主辦單位指定要存在的資料夾，但我們沒有使用。
 - `.gitignore`: Git 版本控制忽略檔案。
+- `LICENSE`: 宣告本專案權利檔案。
 - `evalute.py`: 評估模型效能的程式。
 - `gadget.py`: 一些小工具。
 - `inference.py`: 推理的程式。
