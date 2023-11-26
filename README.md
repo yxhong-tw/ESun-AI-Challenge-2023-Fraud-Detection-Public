@@ -38,6 +38,7 @@
 ├ Preprocess
 │ └ README.md
 ├ .gitignore
+├ LICENSE
 ├ evalute.py
 ├ gadget.py
 ├ inference.py
